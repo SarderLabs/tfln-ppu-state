@@ -18,16 +18,23 @@ Phase gate to 1: provisional filed with company as applicant; repo + workstation
 ## In flight
 | Owner | Item | Status |
 |---|---|---|
-| Riad | ASK-001 repo + file tree | DONE (SarderLabs/tfln-ppu, private) |
 | Riad | ASK-002 workstation conda env | open |
-| Riad | ASK-003 Claude Code on workstation | open |
-| Riad | ASK-004 Dhaka lawyer consult | open — questions in biz/lawyer_questions.md |
-| Riad | ASK-005 USPTO.gov account | open |
-| Riad | ASK-007 Overleaf package → ip/provisional_01 | DONE (TeX + figs + PDF) |
-| Riad | ASK-010 line endings (.gitattributes) | DONE |
-| Riad | ASK-011 v1 GDS files | DONE |
-| Claude | Energy/heat table (device→node→system) | next |
-| Claude | twin/optical_gelu package + benchmarks | next |
+| Riad | ASK-003 Claude Code on workstation | DONE (used for ASK-012, mirror setup) |
+| Riad | ASK-004 Dhaka lawyer consult | open — blocks filing |
+| Riad | ASK-005 USPTO.gov account | open — blocks filing |
+| Riad | ASK-006 entity jurisdiction | open (after ASK-004) |
+| Riad | ASK-013 provisional_01 grep for old operating point | open — blocks filing |
+| Riad | ASK-014 torch twin test + transformer benchmark | open |
+| Claude | C-002 claims-to-feature map + trade-secret register | open |
+| Claude | C-006b transformer benchmark | blocked on ASK-014 |
+| Claude | C-009 provisionals 02–04 | open |
+| Claude | C-010 option-to-license term sheet + outreach brief | open |
+| Claude | C-011 lock-loop PID sim → Verilog | open (promoted to Phase 1) |
+| Claude | C-014 TO heaters → DC-EO trims in layout | open |
+| Claude | C-017 per-node calibration routine | open |
+
+## Next session should start with
+"Phase 1 / Task: ASK-013 claim review / New files: ASK-013_hits.md pasted"
 
 ## Last result
 C-004 energy/heat budget: device 48 fJ/act (sim), system 3.3 pJ nominal / 0.49 pJ optimistic / 53 pJ if TO-biased. Overhead (laser + control) = 97% of system energy. Consequences: EO bias mandatory; lock-loop power is on the critical path; sub-fJ claim retired.

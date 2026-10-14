@@ -1,12 +1,12 @@
 # MANIFEST
 
-Synced from private repo `SarderLabs/tfln-ppu` at commit `3a4c255d8060caba76e9877cc0cb34a138d37776` on 2026-10-14 11:02:29 UTC.
+Synced from private repo `SarderLabs/tfln-ppu` at commit `ae96234bfad9931c3ccf038a68d4297d5c0dbbcc` on 2026-10-14 11:10:08 UTC.
 
 Only the files below are ever mirrored. `*` = file had uncommitted changes in tfln-ppu at sync time.
 
 | file | last tfln-ppu commit | sha256 (12) |
 |---|---|---|
-| `STATE.md` | `3a4c255d8060` | `faa67a0e34ed` |
+| `STATE.md` | `ae96234bfad9` | `8470856c8f3d` |
 | `TASKS.md` | `f8da30a8a2bb` | `8f8d85b90df6` |
 | `DECISIONS.md` | `3a4c255d8060` | `c50af3eaa867` |
 | `twin/energy_model/energy_budget.json` | `215eae163438` | `e0104cda2aac` |
