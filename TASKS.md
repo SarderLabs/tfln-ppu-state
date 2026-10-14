@@ -78,6 +78,27 @@ ASK-014  Workstation run of the torch half of C-006
   Bring back: twin/benchmarks/transformer_results.json + pytest output (commit both)
   Blocks: nothing; completes the benchmark set for the brief
 
+### ASK-015  Request TFLN design manuals — open
+Why: C-012 blocked on a foundry design manual; CCRAFT 2027 runs need it by mid-Dec 2026.
+Steps: send E1 (biz/outreach/email_templates.md) to foundry@ccraft.com and via Lightium's contact form; sign their NDA personally if NewCo does not exist yet (info flows foundry → us); ask Europractice and CMC whether they aggregate CCRAFT/Lightium.
+Cost/time: free; 1–3 weeks for replies.
+Bring back: design manuals → biz/foundry/<name>/ (NOT mirrored), answers to brief §4 Q1–Q11 → biz/foundry/answers.md; especially etch depth and poling-on-MPW.
+Blocks: C-012, C-018.
+
+### ASK-016  Confirm term-sheet economics — open
+Why: all bracketed values in biz/licensing/option_to_license_term_sheet.md are Claude defaults.
+Steps: read §4 and Exhibit A; accept or edit option fee, period, upfront, royalty %, MAR ladder, sublicence share; pick Field A wording.
+Cost/time: 30 min.
+Bring back: edited file committed.
+Blocks: sending E3/E5.
+
+### ASK-017  Retrieve verbatim claim 1 of US 2024/0419951 A1 — open
+Why: FTO paragraph and C-002 need the as-published claim text; research found only a summary.
+Steps: patents.google.com/patent/US20240419951A1 → copy all independent claims; also Patent Center appl. 17/973,118 → note any office action / allowance.
+Cost/time: free, 15 min.
+Bring back: ip/prior_art/US20240419951A1_claims.md + status line.
+Blocks: C-002.
+
 ## OWNER = Claude
 
 | ID | Task | Phase | Status | Needs |
@@ -92,7 +113,7 @@ ASK-014  Workstation run of the torch half of C-006
 | C-007 | Fit 3D FDTD results → coupling DOE map → update design point | 1 | blocked | ASK-002/003 |
 | C-008 | arXiv manuscript (LaTeX) | 1 | open | after filing |
 | C-009 | Provisionals 02/03/04 (spec + 20 claims each) | 2 | open | — |
-| C-010 | Option-to-license term sheet + foundry outreach brief + email templates | 2 | open | C-004 |
+| C-010 | Option-to-license term sheet + foundry outreach brief + email templates | 2 | draft v0.1 | ASK-016 |
 | C-011 | Lock-loop PID: Python sim → Verilog / MCU firmware | 2 | open | — |
 | C-012 | Test-chip GDS (DOE, Q rings, Λ-offset poled rings, 2 nodes, 2×2) | 3 | blocked | foundry design manual |
 | C-013 | Measurement protocol + spectrum-fitting scripts | 3 | open | — |
@@ -100,3 +121,4 @@ ASK-014  Workstation run of the torch half of C-006
 | C-015 | Overlap-computed g (not literature-scaled) from femwell mode fields → knee sensitivity | 1 | done | — |
 | C-016 | Power-normalized overlap cross-check (Poynting normalization) to close the 10–40% η_norm uncertainty | 1 | open | — |
 | C-017 | Per-node calibration routine (recover the 1 pt lost in condition C) | 1 | open | — |
+| C-018 | 200 nm-etch contingency: re-run femwell/CME at 600/200 nm, recompute Λ, M, R, pulley κ; decide 300-vs-200 | 1 | blocked | ASK-015 |

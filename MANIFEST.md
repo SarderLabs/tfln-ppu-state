@@ -1,14 +1,14 @@
 # MANIFEST
 
-Synced from private repo `SarderLabs/tfln-ppu` at commit `ae96234bfad9931c3ccf038a68d4297d5c0dbbcc` on 2026-10-14 11:10:08 UTC.
+Synced from private repo `SarderLabs/tfln-ppu` at commit `151baf5ad91ae9b49cc218d81845437913ffb176` on 2026-10-14 20:54:03 UTC.
 
 Only the files below are ever mirrored. `*` = file had uncommitted changes in tfln-ppu at sync time.
 
 | file | last tfln-ppu commit | sha256 (12) |
 |---|---|---|
-| `STATE.md` | `ae96234bfad9` | `8470856c8f3d` |
-| `TASKS.md` | `f8da30a8a2bb` | `8f8d85b90df6` |
-| `DECISIONS.md` | `3a4c255d8060` | `c50af3eaa867` |
+| `STATE.md` | `151baf5ad91a` | `94aa018ac280` |
+| `TASKS.md` | `151baf5ad91a` | `476ef395fcdb` |
+| `DECISIONS.md` | `151baf5ad91a` | `b400d67d7616` |
 | `twin/energy_model/energy_budget.json` | `215eae163438` | `e0104cda2aac` |
 | `twin/energy_model/energy_budget.md` | `215eae163438` | `43531941759c` |
 | `twin/optical_gelu/operating_point.json` | `f8da30a8a2bb` | `d811a60d84b5` |

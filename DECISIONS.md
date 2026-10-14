@@ -18,3 +18,8 @@
 - 2026-10-14  GeLU operating point (sim, C-005): η_B ≈ 0.67, φ_B ≈ 4.33 rad, δ_a ≈ 0.28 κ_a, δ_b ≈ 1.0 κ_b, P_in(x=0) ≈ 1.5 µW. Reason: fit to x·Φ(x) gives RMSE 0.040; the earlier η_B = 0.38 / φ_B = π − 0.35 / δ = 0 point gives RMSE 1.27 (no dip). EO trims need ≥2π on φ_B and ≥ ±1 linewidth on δ_a, δ_b.
 
 - 2026-10-14  Public read-only mirror SarderLabs/tfln-ppu-state carries STATE/TASKS/DECISIONS and non-sensitive result JSONs so Claude chat sessions can read live state without uploads. Allow-list enforced in scripts/sync_state.py; ip/, layout/, biz/, control/ never mirrored.
+
+- 2026-10-15  Foundry route: CCRAFT (CSEM spin-off) is primary test-chip candidate, Lightium secondary, QCi only under a competitor NDA; target MPW 2701/2702 (design-in 2027-03-21), not 2604. Reason: only published TFLN MPW schedule with poling as a service; 2604 unreachable before filing/entity.
+- 2026-10-15  Foundries get non-exclusive hosting rights only; licensee options are field-limited (Field A = ML activation/nonlinear processing); Fields B/C reserved. Reason: foundry-neutral IP keeps second-sourcing and other fields alive.
+- 2026-10-15  Royalty base is the photonic die/module, never the system. Reason: 3 % of die passes; any % of a server is rejected.
+- 2026-10-15  Outreach gates G1–G4 (biz/outreach/foundry_outreach_brief.md §1) are binding on all sends. Reason: EPC Art. 54 absolute novelty; applicant must be the entity.
