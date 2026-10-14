@@ -1,0 +1,12 @@
+{
+  "gelu": {
+    "val_loss": 1.76312420129776,
+    "bits_per_char": 2.5438236925375266,
+    "energy_pJ_activations": null
+  },
+  "optical": {
+    "val_loss": 1.7629638361930846,
+    "bits_per_char": 2.54359231884733,
+    "energy_pJ_activations": 63221163622.4
+  }
+}

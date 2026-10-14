@@ -66,16 +66,18 @@ ASK-012  Confirm LaTeX source is committed
          If main.tex is missing, copy it from the Overleaf zip and commit "ip: provisional_01 LaTeX source"
   Bring back: the ls-files output
 
-ASK-013  Check provisional_01 against the fitted operating point
+ASK-013  Check provisional_01 against the fitted operating point — DONE
   Why: finding 2 above — a fixed η_B/φ_B/δ=0 recitation would describe a non-working point
   Steps: grep ip/provisional_01/src/main.tex for "0.38", "0.62", "pi - 0.35", "0.35", "detun"; paste me every hit with its claim/paragraph number
   Bring back: the hits
-  Blocks: filing of provisional_01 (fix is a small edit; I draft it)
+  Result 2026-10-14: ip/provisional_01/ASK-013_hits.md — 22 hits on 13 lines, all in the specification (¶[0009], [0010], [0018], [0019], [0028], [0032], [0039], FIG. 2 caption, numeral legend). None in the claims; claim 10 is the only claim reciting the old ranges (55:45–70:30, π − 0.2…0.5 rad) and the fitted point (η_B ≈ 0.67, φ_B ≈ 4.33 rad, δ ≠ 0) lies outside both. No "detun" anywhere.
+  Blocks: filing of provisional_01 (fix is a small edit; Claude drafts it)
 
-ASK-014  Workstation run of the torch half of C-006
+ASK-014  Workstation run of the torch half of C-006 — DONE
   Steps: cd tfln-ppu; pip install torch pytest; pytest twin/tests -q;
          python twin/benchmarks/tiny_transformer.py --steps 3000   (≈10–20 min CPU, faster on GPU)
   Bring back: twin/benchmarks/transformer_results.json + pytest output (commit both)
+  Result 2026-10-15: pytest 2/2 passed on workstation (.venv-ppu, torch 2.14.1 CPU), Kaggle T4 and Colab T4. Transformer run completed on Colab T4 (results/transformer_run_20261015_colab.txt): val_loss GeLU 1.7631 vs OpticalGeLU 1.7630 (2.544 vs 2.544 bits/char), i.e. parity. Workstation CPU run infeasible: OpticalGeLU measured 74 s/step (62 h) because autograd unrolls the 20-iteration complex-float64 Newton solve; the same unrolled graph OOMs a 16 GB T4, so the GPU runs used gradient checkpointing around OpticalGeLU.forward (twin/benchmarks/{kaggle,colab}_c006b.ipynb) — numerically identical, module files untouched. Follow-up: C-019.
   Blocks: nothing; completes the benchmark set for the brief
 
 ### ASK-015  Request TFLN design manuals — open
@@ -109,7 +111,7 @@ Blocks: C-002.
 | C-004 | Energy/heat table device→node→system | 1 | done | — |
 | C-005 | twin/optical_gelu PyTorch package + energy counter | 1 | done | — |
 | C-006a | MLP benchmarks (MNIST, Fashion-MNIST) | 1 | done | — |
-| C-006b | Tiny transformer benchmark (torch, workstation) | 1 | blocked | ASK-014 |
+| C-006b | Tiny transformer benchmark (torch, workstation) | 1 | done | — |
 | C-007 | Fit 3D FDTD results → coupling DOE map → update design point | 1 | blocked | ASK-002/003 |
 | C-008 | arXiv manuscript (LaTeX) | 1 | open | after filing |
 | C-009 | Provisionals 02/03/04 (spec + 20 claims each) | 2 | open | — |
@@ -122,3 +124,4 @@ Blocks: C-002.
 | C-016 | Power-normalized overlap cross-check (Poynting normalization) to close the 10–40% η_norm uncertainty | 1 | open | — |
 | C-017 | Per-node calibration routine (recover the 1 pt lost in condition C) | 1 | open | — |
 | C-018 | 200 nm-etch contingency: re-run femwell/CME at 600/200 nm, recompute Λ, M, R, pulley κ; decide 300-vs-200 | 1 | blocked | ASK-015 |
+| C-019 | OpticalGeLU torch twin: implicit-gradient backward (custom autograd.Function through the converged Newton fixed point) — removes the 20-iteration unrolled graph (74 s/step CPU, OOM on 16 GB T4); keep 1e-6 match test | 1 | open | — |

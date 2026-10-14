@@ -27,13 +27,13 @@ Phase gate to 1: provisional filed with company as applicant; repo + workstation
 | Riad | ASK-004 Dhaka lawyer consult | open — blocks filing |
 | Riad | ASK-005 USPTO.gov account | open — blocks filing |
 | Riad | ASK-006 entity jurisdiction | open (after ASK-004) |
-| Riad | ASK-013 provisional_01 grep for old operating point | open — blocks filing |
-| Riad | ASK-014 torch twin test + transformer benchmark | open |
+| Riad | ASK-013 provisional_01 grep for old operating point | DONE — ip/provisional_01/ASK-013_hits.md (22 hits, spec only, none in claims; claim 10 ranges exclude the fitted point) → Claude drafts the edit |
+| Riad | ASK-014 torch twin test + transformer benchmark | DONE — pytest 2/2 (workstation, Kaggle, Colab); transformer run on Colab T4 |
 | Riad | ASK-015 CCRAFT/Lightium design-manual request | open — blocks C-012 |
 | Riad | ASK-016 confirm term-sheet economics | open |
 | Riad | ASK-017 retrieve Caltech claim 1 verbatim | open — blocks C-002 FTO para |
 | Claude | C-002 claims-to-feature map + trade-secret register | open |
-| Claude | C-006b transformer benchmark | blocked on ASK-014 |
+| Claude | C-006b transformer benchmark | DONE — val_loss GeLU 1.7631 vs OpticalGeLU 1.7630 (parity); twin/benchmarks/transformer_results.json |
 | Claude | C-009 provisionals 02–04 | open |
 | Claude | C-010 term sheet + outreach brief | DRAFT v0.1 — awaiting ASK-016 economics |
 | Claude | C-011 lock-loop PID sim → Verilog | open (promoted to Phase 1) |
