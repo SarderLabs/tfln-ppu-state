@@ -1,0 +1,27 @@
+{
+  "source": "sim",
+  "hidden": 256,
+  "epochs": 3,
+  "datasets": {
+    "MNIST": {
+      "A_ideal_gelu": 0.9747,
+      "B_optical_aware_train_clean_test": 0.9744,
+      "C_optical_aware_train_noisy_varied_test": 0.966,
+      "D_ideal_train_optical_dropin_test": 0.9745,
+      "activations_per_inference": 256,
+      "energy_pJ_per_inference_activations_only": 632.576,
+      "noise_sigma_output_units": 0.032069665887546964,
+      "runtime_s": 15.2
+    },
+    "Fashion-MNIST": {
+      "A_ideal_gelu": 0.8706,
+      "B_optical_aware_train_clean_test": 0.8692,
+      "C_optical_aware_train_noisy_varied_test": 0.8592,
+      "D_ideal_train_optical_dropin_test": 0.8679,
+      "activations_per_inference": 256,
+      "energy_pJ_per_inference_activations_only": 632.576,
+      "noise_sigma_output_units": 0.032069665887546964,
+      "runtime_s": 15.5
+    }
+  }
+}

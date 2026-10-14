@@ -1,0 +1,154 @@
+{
+  "source": "sim+assumed",
+  "design_point": {
+    "lambda_um": 1.55,
+    "Q_i": 2000000.0,
+    "kappa0_over_2pi_MHz": 96.71,
+    "kext_a_over_2pi_MHz": 48.3536,
+    "kext_b_over_2pi_MHz": 386.829,
+    "loaded_linewidth_MHz": 145.06,
+    "Q_loaded": 1333334,
+    "P_knee_uW_CME": 4.88,
+    "P_knee_uW_wrap12": 7.867,
+    "eta_A": 0.62,
+    "eta_SH_peak": 0.333,
+    "bandwidth_MHz": {
+      "optimistic": 145.1,
+      "nominal": 101.5,
+      "conservative": 72.5
+    }
+  },
+  "digital_baselines": {
+    "GPU_FP16_GeLU_pJ": [
+      10.0,
+      20.0
+    ],
+    "ASIC_7nm_LUT_GeLU_pJ": [
+      0.5,
+      2.0
+    ],
+    "note": "GPU: ~0.7 pJ/FLOP system-level (\u2248700 W / 1e15 FLOP/s) \u00d7 8\u201316 FLOP for a tanh-approx GeLU + register/SRAM traffic. ASIC: SRAM-LUT GeLU in a 7 nm inference accelerator. Both are assumptions, not measurements."
+  },
+  "scenarios": [
+    {
+      "scenario": "nominal",
+      "symbol_rate_MHz": 101.5,
+      "symbol_time_ns": 9.85,
+      "device_optical_fJ_per_act": 48.1,
+      "node_optical_fJ_per_act": 77.5,
+      "laser_electrical_fJ_per_act": 1291.9,
+      "bias_fJ_per_act": 9.8,
+      "control_fJ_per_act": 1969.6,
+      "system_pJ_per_act": 3.349,
+      "heat_W_per_1e12_act_s": 3.349,
+      "nodes_for_1e12_act_s": 9848,
+      "assumptions": {
+        "name": "nominal",
+        "symbol_rate_MHz": 101.54259116129032,
+        "P_knee_uW": 4.88,
+        "facet_coupling": 0.5,
+        "routing_eff": 0.8,
+        "laser_wpe": 0.15,
+        "bias_mW": 0.001,
+        "control_mW": 0.2,
+        "notes": "EO DC bias; 2 tap PDs + low-BW TIAs + shared ADC/PID; 3 dB facet, 1 dB routing; DFB WPE 15 %"
+      }
+    },
+    {
+      "scenario": "optimistic",
+      "symbol_rate_MHz": 145.1,
+      "symbol_time_ns": 6.89,
+      "device_optical_fJ_per_act": 33.6,
+      "node_optical_fJ_per_act": 54.3,
+      "laser_electrical_fJ_per_act": 287.1,
+      "bias_fJ_per_act": 6.9,
+      "control_fJ_per_act": 137.9,
+      "system_pJ_per_act": 0.486,
+      "heat_W_per_1e12_act_s": 0.486,
+      "nodes_for_1e12_act_s": 6894,
+      "assumptions": {
+        "name": "optimistic",
+        "symbol_rate_MHz": 145.06084451612904,
+        "P_knee_uW": 4.88,
+        "facet_coupling": 0.7,
+        "routing_eff": 0.9,
+        "laser_wpe": 0.3,
+        "bias_mW": 0.001,
+        "control_mW": 0.02,
+        "notes": "EO bias; duty-cycled, multiplexed lock loop (drift is kHz); good edge coupler; WPE 30 %"
+      }
+    },
+    {
+      "scenario": "overlap_g_C015",
+      "symbol_rate_MHz": 101.5,
+      "symbol_time_ns": 9.85,
+      "device_optical_fJ_per_act": 17.2,
+      "node_optical_fJ_per_act": 27.8,
+      "laser_electrical_fJ_per_act": 463.3,
+      "bias_fJ_per_act": 9.8,
+      "control_fJ_per_act": 1969.6,
+      "system_pJ_per_act": 2.471,
+      "heat_W_per_1e12_act_s": 2.471,
+      "nodes_for_1e12_act_s": 9848,
+      "assumptions": {
+        "name": "overlap_g_C015",
+        "symbol_rate_MHz": 101.54259116129032,
+        "P_knee_uW": 1.75,
+        "facet_coupling": 0.5,
+        "routing_eff": 0.8,
+        "laser_wpe": 0.15,
+        "bias_mW": 0.001,
+        "control_mW": 0.2,
+        "notes": "as nominal but knee from the overlap-computed g (C-015), 1.0 \u00b5m rib, 600/300 stack"
+      }
+    },
+    {
+      "scenario": "wrap12_design",
+      "symbol_rate_MHz": 101.5,
+      "symbol_time_ns": 9.85,
+      "device_optical_fJ_per_act": 77.5,
+      "node_optical_fJ_per_act": 125.0,
+      "laser_electrical_fJ_per_act": 2082.7,
+      "bias_fJ_per_act": 9.8,
+      "control_fJ_per_act": 1969.6,
+      "system_pJ_per_act": 4.187,
+      "heat_W_per_1e12_act_s": 4.187,
+      "nodes_for_1e12_act_s": 9848,
+      "assumptions": {
+        "name": "wrap12_design",
+        "symbol_rate_MHz": 101.54259116129032,
+        "P_knee_uW": 7.867,
+        "facet_coupling": 0.5,
+        "routing_eff": 0.8,
+        "laser_wpe": 0.15,
+        "bias_mW": 0.001,
+        "control_mW": 0.2,
+        "notes": "as nominal but knee from the wrap-12\u00b0 FDFD design point"
+      }
+    },
+    {
+      "scenario": "TO_bias_case",
+      "symbol_rate_MHz": 101.5,
+      "symbol_time_ns": 9.85,
+      "device_optical_fJ_per_act": 48.1,
+      "node_optical_fJ_per_act": 77.5,
+      "laser_electrical_fJ_per_act": 1291.9,
+      "bias_fJ_per_act": 49240.4,
+      "control_fJ_per_act": 1969.6,
+      "system_pJ_per_act": 52.579,
+      "heat_W_per_1e12_act_s": 52.579,
+      "nodes_for_1e12_act_s": 9848,
+      "assumptions": {
+        "name": "TO_bias_case",
+        "symbol_rate_MHz": 101.54259116129032,
+        "P_knee_uW": 4.88,
+        "facet_coupling": 0.5,
+        "routing_eff": 0.8,
+        "laser_wpe": 0.15,
+        "bias_mW": 5.0,
+        "control_mW": 0.2,
+        "notes": "reference-arm bias held with a thermo-optic heater (P_\u03c0 \u2248 20 mW on TFLN) \u2014 shows why EO bias is mandatory"
+      }
+    }
+  ]
+}
